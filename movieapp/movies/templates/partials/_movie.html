@@ -1,0 +1,14 @@
+
+{% load static %}
+<div class="card  mb-2"  >
+    <img
+      src="{% static 'img/'|add:m.image %}"
+      class="card-img-top"
+      alt="The picture alternative description text area"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{m.movie_name}}</h5>
+      <p class="card-text">{{m.explanation}}.</p>
+      <a href="{% url 'details' m.id %}" class="btn btn-danger">Details</a>
+    </div>
+  </div>
